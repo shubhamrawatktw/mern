@@ -7,4 +7,5 @@ const authController = require("../controllers/authController")
 
 
 router.route("/").post(loginLimiter,authController.login)
-router.route("/refresh").post(authController.refresh)
+router.route("/refresh").get(authController.refresh)
+router.route("/logout").post(authController.logout)
