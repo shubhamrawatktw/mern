@@ -22,8 +22,9 @@ app.use(express.json())
 app.use(cookieParser())
 
 
-
-app.use('/',()=>console.log("homepage"))
+app.use("/auth",require("./routes/authRoutes"))
+app.use('/users', require('./routes/userRoutes'))
+app.use('/notes', require('./routes/noteRoutes'))
 
 
 app.use(errorHandler)
